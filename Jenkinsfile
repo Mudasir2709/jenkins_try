@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'pytest hello_test.py'
+                sh 'pytest hello.py'
             }
         }
     }
