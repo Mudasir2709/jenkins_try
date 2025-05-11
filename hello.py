@@ -1,9 +1,11 @@
 import time
 
+import pytest
 from selenium import webdriver
 
 
-driver = webdriver.Chrome()
-driver.get("https://feddev.seido.me/login")
-driver.maximize_window()
-time.sleep(5)
+class TestJenkins:
+    @pytest.mark.usefixtures("setup")
+    def test_screenshot(self):
+        time.sleep(5)
+
